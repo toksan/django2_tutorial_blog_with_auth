@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Post{% endblock %}
+
+{% block content %}
+<h1>Delete Post</h1>
+<section class="common-form">
+    <p>Are you sure you want to delete "{{ object.title }}" ?</p>
+    <form action="" method="post">{% csrf_token %}
+        <button type="submit" class="submit delete">Delete</button>
+    </form>
+</section>
+<section>
+    <p><a href="javascript:history.back()">&lt; Back</a></p>
+</section>
+{% endblock %}

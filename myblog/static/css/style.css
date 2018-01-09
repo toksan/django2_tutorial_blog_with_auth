@@ -1,0 +1,193 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+div, p, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6 label, input, textarea, select, button {
+    margin: 0;
+    padding: 0;
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.8;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-size: 1.2rem;
+}
+
+a {
+    color: #6495ed;
+    text-decoration: none;
+}
+
+a.act {
+    color: #ff5252;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    margin: 0 0 8px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.error-msg, .errorlist * {
+    color: #ff0000;
+}
+
+header {
+    width: 100%;
+    display: table;
+    margin: 0 0 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+header a {
+    color: #888888;
+}
+
+header .site-name {
+    padding-left: 8px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+header nav {
+    padding-right: 8px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+}
+
+header nav li {
+    text-align: right;
+    display: inline-block;
+    padding-right: 24px;
+}
+
+header nav li:last-child {
+    padding-right: 0;
+}
+
+header .site-name a {
+    font-size: 1.4rem;
+}
+
+.content {
+    padding: 0 8px;
+}
+
+/**
+ * index
+ */
+.user-name {
+    margin-bottom: 24px;
+    color: #993333;
+}
+
+.post-list ul {
+    width: 100%;
+}
+
+.post-list ul li {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.post-list, .pagination {
+
+}
+
+.pagination ul {
+    width: 100%;
+    display: table;
+}
+
+.pagination li {
+    display: table-cell;
+    width: 50%;
+}
+
+.pagination li:last-child {
+    text-align: right;
+}
+
+/**
+ * detail
+ */
+.post-text {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.post-date {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.post-date span {
+    padding: 0 16px;
+}
+
+.post-edit {
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px dotted #cccccc;
+}
+
+.post-edit a:first-child {
+    margin-right: 24px;
+}
+
+/**
+ * Create, Update
+ */
+.common-form label {
+    display: block;
+}
+
+.common-form p {
+    margin-bottom: 8px;
+}
+
+.common-form input, .common-form textarea {
+    padding: 4px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.common-form select {
+    padding: 4px;
+    margin-bottom: 8px;
+}
+
+.common-form .submit {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 8px 36px;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
+
+.common-form .delete {
+    background-color: #f44336;
+}

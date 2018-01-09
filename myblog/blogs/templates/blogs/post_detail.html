@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Sign up{% endblock %}
+
+{% block content %}
+<h1>{{ object.title }}</h1>
+<section class="post-text">
+    {{ object.text|linebreaksbr }}
+    <p>Author: {{ object.author }}</p>
+</section>
+<section class="post-date">
+    <p>Created:&nbsp;{{ object.created_at }}<span>/</span>Updated:&nbsp;{{ object.updated_at }}</p>
+</section>
+{# ownership #}
+{% if request.user.id == object.author_id %}
+<section class="post-edit">
+    <a class="act" href="{% url 'blogs:update' post.pk %}">Edit</a>
+    <a class="act" href="{% url 'blogs:delete' post.pk %}">Delete</a>
+</section>
+{% endif %}
+<section>
+    <p><a href="javascript:history.back()">&lt; Back</a></p>
+</section>
+{% endblock %}

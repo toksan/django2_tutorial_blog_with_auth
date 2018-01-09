@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>Username</h1>
+<p class="user-name">{{ user }}</p>
+{% endif %}
+
+<h1>Articles</h1>
+<section class="post-list">
+    <ul>
+        {% for post in object_list %}
+        <li>
+            <h2><a href="{% url 'blogs:detail' post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.text }}</p>
+        </li>
+        {% empty %}
+        <li class="no-post">
+            <p>No articles yet.</p>
+            <p><a class="act" href="{% url 'blogs:create' %}">Add New Post</a></p></li>
+        {% endfor %}
+    </ul>
+</section>
+
+{% if is_paginated %}
+<section class="pagination">
+    <ul>
+        <li>
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}">&lt;&lt; Prev</a>
+            {% else %}
+            &lt;&lt; Prev
+            {% endif %}
+        </li>
+        <li>
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">Next &gt;&gt;</a>
+            {% else %}
+            Next &gt;&gt;
+            {% endif %}
+        </li>
+    </ul>
+</section>
+{% endif %}
+{% endblock %}
